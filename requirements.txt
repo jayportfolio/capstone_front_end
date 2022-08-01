@@ -1,0 +1,14 @@
+flask
+gunicorn
+sqlalchemy
+
+progressbar2
+python-dateutil
+
+#django
+#django-heroku
+
+pandas
+scrapy
+scrapy_splash
+html2text

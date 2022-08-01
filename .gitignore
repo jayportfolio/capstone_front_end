@@ -1,0 +1,6 @@
+/venv/
+/globalfunction/
+/.idea/
+__pycache__
+identifier.sqlite
+/ignore/
