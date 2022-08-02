@@ -1,0 +1,40 @@
+.title {
+    font-weight: bold;
+}
+
+.main_content {
+    padding: 20px;
+}
+
+nav {
+    background-color: #000;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+nav > a {
+    color: white;
+    margin-right: 10px;
+}
+
+
+.message {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f3f3f3
+}
+
+nav a {
+    color: #d64161;
+    font-size: 3em;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.alert {
+    padding: 20px;
+    margin: 5px;
+    color: #970020;
+    background-color: #ffd5de;
+}

@@ -1,0 +1,56 @@
+{% extends 'shared/_base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Add a New Message {% endblock %}</h1>
+    <form method="post">
+        <label for="title">Title</label>
+        <br>
+        <input type="text" name="title"
+               placeholder="Message title"
+               value="{{ request.form['title'] }}"></input>
+        <br>
+
+        <label for="content">Message Content</label>
+        <br>
+        <textarea name="content"
+                  placeholder="Message content"
+                  rows="15"
+                  cols="60"
+        >{{ request.form['content'] }}</textarea>
+        <br>
+        <!--button type="submit">Submit</button-->
+        Votes: <span id="count">{{ votes }}</span>
+        <button type="button" id="up">Up</button>
+        <button type="button" id="dostuff">Submit2</button>
+    <button type="submit">Submit</button>
+    </form>
+{% endblock %}
+
+
+{% block additional_js %}
+    <script type="text/javascript">
+        console.log('got this far')
+        document.addEventListener('DOMContentLoaded', () => {
+            //things to do when the page has been loaded
+            console.log("dom loaded")
+        });
+        document.querySelectorAll('button').forEach(button => {
+            button.onclick = () => {
+                // send request to server accordingly
+                console.log('AJAX: button clicked')
+                console.log(button.id)
+
+                const request = new XMLHttpRequest();
+                request.open('POST', `/${button.id}`);
+
+                request.onload = () => {
+                    const response = request.responseText;
+                    document.getElementById('count').innerHTML = response;
+                };
+                request.send();
+            };
+        });
+        console.log('got to the end')
+    </script>
+
+{% endblock %}
