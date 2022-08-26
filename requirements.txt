@@ -1,6 +1,5 @@
 flask
 gunicorn
-sqlalchemy
 
 progressbar2
 python-dateutil
@@ -9,6 +8,13 @@ python-dateutil
 #django-heroku
 
 pandas
-scrapy
-scrapy_splash
-html2text
+#scrapy
+#scrapy_splash
+#html2text
+numpy
+
+joblib
+scikit-learn
+
+requests
+beautifulsoup4
